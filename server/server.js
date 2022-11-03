@@ -8,7 +8,7 @@ app.use(express.json())
 
 
 
-const { home } = require('./controllers/pageCtrl')
+const { home, image } = require('./controllers/pageCtrl')
 
 app.get("/", home)
 app.get("/image", image)
