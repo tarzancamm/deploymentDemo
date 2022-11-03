@@ -21,5 +21,11 @@ module.exports = {
         } catch {
             rollbar.critical('Backend error with test func')
         }
+
+        try {
+            aSecondBunkFunc()
+        } catch {
+            rollbar.warning('hey, this func does not exist')
+        }
     }
 }
