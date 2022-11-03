@@ -7,14 +7,6 @@ const app = express()
 app.use(express.json())
 
 
-// include and initialize the rollbar library with your access token
-var Rollbar = require('rollbar')
-var rollbar = new Rollbar({
-  accessToken: process.env.ROLLBAR_TOKEN,
-  captureUncaught: true,
-  captureUnhandledRejections: true,
-})
-
 
 const { home } = require('./controllers/pageCtrl')
 
