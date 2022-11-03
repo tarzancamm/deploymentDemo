@@ -11,13 +11,15 @@ var rollbar = new Rollbar({
 module.exports = {
     home: (req, res) => {
         res.sendFile(path.join(__dirname, "../../index.html"))
-    }
+    },
 
-    // about: (req, res) => {
-    //     try {
-    //         doesNotExistFunc()
-    //     } catch {
-    //         rollbar.critical('Backend error with test func')
-    //     }
-    // }
+    image: (req, res) => {
+        res.sendFile(path.join(__dirname, "../../resources/skipowder.jpeg"))
+
+        try {
+            doesNotExistFunc()
+        } catch {
+            rollbar.critical('Backend error with test func')
+        }
+    }
 }

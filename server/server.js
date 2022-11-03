@@ -11,7 +11,7 @@ app.use(express.json())
 const { home } = require('./controllers/pageCtrl')
 
 app.get("/", home)
-// app.get("/about", about)
+app.get("/image", image)
 
 
 
